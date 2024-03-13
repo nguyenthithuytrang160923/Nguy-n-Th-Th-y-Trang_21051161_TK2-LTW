@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .signup {
+            margin-top: 10px;
+        }
+
+        .signup a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcNCAgICAcHBwgHBw0HBwgHBw8ICQgNFREWFhURExMYHSggGBolGxMTITEhJSkrLi4uFx8zODMtNyg5LisBCgoKDQ0NDg0NDysZFRkrKy03Ny0rKystKy0rKzcrKystKystKy0rLSs3KysrKy0rKysrKysrKysrKysrLSsrK//AABEIAOEA4QMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQQDAgf/xAAXEAEBAQEAAAAAAAAAAAAAAAAAAREh/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwUE/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERAhL/2gAMAwEAAhEDEQA/APtixFjLYAIIIqVKCKzQEEARQAVqAg1jcARWhAVQEVQEFAAAFEBQalQfK5KUQQSiVWaII0yICgCVWoAitSKgK1BAVooCqJQARUFFEogAoABrUA+VzVKJVSjzVStMohqKiiCqIDTUgCDWKgK1AAUQFAAAAC1AEAFEVFEagK+VlEErUZKlKjSAaimCA01IICtSAA0ACgAIAoKSwEQEAAEAFTU4qcUTWkoj54JahUaiCVUaQQFawQFWQAGgAAAUAVAogAACKggArOiKgloCjOtCCOMjoIVFQQGjBAVoAFAAAAAAARUVAAAEEATQBWbQAcuukVAY9O6COT6xFRoARVABQAAAAAQAUEAQAE0RUE0AGbQAceuhAVztABHVAYegAKAAqAAACAAACoIKIgAmgAmiKDF6QAcr0ICuegAiAKOoisPSAAEAAAQAEBUEARU0AE0AEtABzvQgDnehAVgUTQKgKygAOoKw9MAEEUBABBRBBFRU0AGdABm0EBzvQAOdoCKyHBKC2oCoIAgADtAgw9QAEAQZUWYlEQAQRUVnQEGb0ADlegQGNUQVFCAPIIqKgCAIIogDuCsPUqCoMgqCagAzoCKzaAg53oBByvSoCs6AgCiAAKggAAggAqAAO6g5vUoCDOiKgzaAisWgIOXXQgK5XoEBlRABRKKCCpoAAioAAqAgIAA0gOb07RFQYtEVBi0QRXLroQFcrQEGVQRRRAF1ADRAEAFAAAEAAEBAGoBzenRAGKiKK5dIgDjUAVhAFBAEAAEAABQAAAEQAAAEAB//2Q==');background-size: cover;">
+   
+    </body>
+       
+      </div>
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="username">UserName</label><br>
+<input type="text" id="username" name="username"><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br>
+
+            <input type="submit" value="Log in">
+        </form>
+        <div class="signup">
+            <a href="#">Forgot Password</a> |
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn trình duyệt gửi biểu mẫu
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Kiểm tra tên người dùng và mật khẩu
+            if (username === "admin" && password === "admin123") {
+                alert("Đăng nhập thành công!");
+                // Điều hướng đến trang khác sau khi đăng nhập thành công
+                // window.location.href = "dashboard.html";
+            } else {
+                alert("Tên người dùng hoặc mật khẩu không chính xác. Vui lòng thử lại!");
+            }
+        });
+    </script>
+</body>
+</html>
